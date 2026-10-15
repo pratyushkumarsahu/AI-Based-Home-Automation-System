@@ -1,0 +1,41 @@
+# config/rules.yaml
+# Smart Home Monitoring Security & Suspicious Activity Rules
+
+rules:
+  rule_1_restricted_zone:
+    enabled: true
+    description: "Unauthorized person detected inside restricted zone"
+    target_class: "person"
+    restricted_zone: "bedroom1"
+    severity: "CRITICAL"
+    action: "ALERT"
+
+  rule_2_restricted_hours_or_away:
+    enabled: true
+    description: "Person detected during curfew hours or in away mode"
+    target_class: "person"
+    severity: "HIGH"
+    action: "ALERT"
+
+  rule_3_loitering:
+    enabled: true
+    description: "Person loitering longer than threshold"
+    target_class: "person"
+    threshold_seconds: 4.0
+    severity: "WARNING"
+    action: "INVESTIGATE"
+
+  rule_4_unknown_object:
+    enabled: true
+    description: "Unknown obstacle detected on patrol route"
+    target_class: "obstacle"
+    severity: "WARNING"
+    action: "AVOID_OBSTACLE"
+
+  rule_5_path_blocked:
+    enabled: true
+    description: "Patrol path blocked too long by obstacle"
+    blocked_timeout_seconds: 3.0
+    safety_distance: 0.50
+    severity: "MEDIUM"
+    action: "AVOID_OBSTACLE"
