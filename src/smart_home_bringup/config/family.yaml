@@ -1,0 +1,25 @@
+# config/family.yaml
+# Smart Home Monitoring - Authorized Family Member Registry
+
+family_members:
+  1:
+    name: "Pratyush"
+    badge_color: "green"
+    badge_rgb: [0.0, 0.85, 0.2]
+    allowed_zones: ["living_room", "hallway", "entrance", "dining_room", "kitchen", "bedroom1", "bedroom2"]
+  2:
+    name: "Arpita"
+    badge_color: "blue"
+    badge_rgb: [0.1, 0.3, 0.9]
+    allowed_zones: ["living_room", "hallway", "entrance", "dining_room", "kitchen", "bedroom1", "bedroom2"]
+  3:
+    name: "Rohit"
+    badge_color: "cyan"
+    badge_rgb: [0.1, 0.85, 0.85]
+    allowed_zones: ["living_room", "hallway", "entrance", "dining_room", "kitchen", "bedroom1", "bedroom2"]
+
+restricted_rules:
+  # Restricted zones where family members are only allowed during specific non-curfew hours
+  restricted_zones: ["bedroom1"]
+  curfew_start_hour: 22
+  curfew_end_hour: 6

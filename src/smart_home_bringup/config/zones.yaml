@@ -1,0 +1,67 @@
+# config/zones.yaml
+# Smart Home Monitoring Zone & Patrol Configuration
+
+zones:
+  entrance:
+    type: "normal"
+    x_min: -2.7
+    x_max: 2.7
+    y_min: -6.7
+    y_max: -4.8
+
+  dining_room:
+    type: "normal"
+    x_min: -2.7
+    x_max: 2.7
+    y_min: -4.8
+    y_max: -2.0
+
+  hallway:
+    type: "normal"
+    x_min: -2.7
+    x_max: 2.7
+    y_min: -2.0
+    y_max: 3.5
+
+  living_room:
+    type: "normal"
+    x_min: 2.7
+    x_max: 8.0
+    y_min: -6.7
+    y_max: -0.5
+
+  kitchen:
+    type: "normal"
+    x_min: -8.0
+    x_max: -2.7
+    y_min: -6.7
+    y_max: -0.5
+
+  bedroom1:
+    type: "restricted" # Master bedroom designated as Restricted Zone
+    x_min: -8.0
+    x_max: -2.7
+    y_min: 0.5
+    y_max: 6.7
+
+  bedroom2:
+    type: "normal"
+    x_min: 2.7
+    x_max: 8.0
+    y_min: 0.5
+    y_max: 6.7
+
+home_mode: "away" # "home" or "away"
+
+restricted_hours:
+  enabled: true
+  start_hour: 22
+  end_hour: 6
+
+patrol:
+  tolerance: 0.45
+  linear_speed: 0.35
+  angular_speed: 0.60
+  safety_distance: 0.70
+  stop_distance: 0.45
+  stuck_timeout_sec: 3.5

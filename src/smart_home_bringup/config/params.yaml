@@ -1,0 +1,48 @@
+/**:
+  ros__parameters:
+    use_sim_time: true
+
+patrol_navigator:
+  ros__parameters:
+    tolerance: 0.45
+    linear_speed: 0.35
+    angular_speed: 0.60
+    safety_distance: 0.70
+    stop_distance: 0.45
+    stuck_timeout_sec: 2.5
+    max_stuck_retries: 3
+    obstacle_persistence_sec: 3.5
+
+object_detection_node:
+  ros__parameters:
+    confidence_threshold: 0.35
+    nms_threshold: 0.45
+    input_width: 640
+    input_height: 640
+
+decision_maker_node:
+  ros__parameters:
+    home_mode: "away"
+    restricted_hours_enabled: true
+    restricted_start_hour: 22
+    restricted_end_hour: 6
+    loitering_threshold_sec: 4.0
+    obstacle_safety_dist: 0.50
+    blocked_timeout_sec: 3.0
+    restricted_zone: "bedroom1"
+    gas_warning_ppm: 50.0
+    gas_danger_ppm: 100.0
+    alert_cooldown_sec: 30.0
+
+gas_sensor_node:
+  ros__parameters:
+    source_x: -4.5
+    source_y: -2.5
+    source_z: 0.8
+    peak_ppm: 400.0
+    falloff_k: 0.12
+    noise_sigma: 1.0
+
+alert_manager_node:
+  ros__parameters:
+    terminal_bell: true
