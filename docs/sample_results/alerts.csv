@@ -1,0 +1,5 @@
+t,type,severity,zone,identity,confidence,snapshot_path
+30.122,Rule_Outsider_Intrusion,HIGH,hallway,OUTSIDER,0.76,
+80.322,Rule_Gas_Warning,MEDIUM,hallway,Unknown,0.9,
+135.126,Rule_Gas_Warning,MEDIUM,living_room,Unknown,0.9,
+170.959,Rule_Gas_Warning,MEDIUM,hallway,Unknown,0.9,

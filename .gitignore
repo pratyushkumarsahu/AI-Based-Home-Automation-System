@@ -1,0 +1,11 @@
+build/
+install/
+log/
+logs/
+results/
+snapshots/
+*.onnx
+__pycache__/
+*.pyc
+*.log
+frames_*

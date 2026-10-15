@@ -1,0 +1,24 @@
+============================================================
+SMART HOME MONITORING SYSTEM - RUN SUMMARY REPORT
+============================================================
+Run Directory         : /home/vboxuser/home_monitor_ws/results/full_20261013_190710
+Duration              : 179.6 s
+Distance Travelled    : 3.69 m
+Average Speed         : 0.05 m/s
+Closest Obstacle      : 0.15 m
+Max Gas Concentration : 97.9 ppm
+Total Alerts Raised   : 4
+  - Rule_Gas_Warning (MEDIUM): 3
+  - Rule_Outsider_Intrusion (HIGH): 1
+Rooms Visited (2) : hallway -> living_room
+Identities Detected (9): Arpita, OUTSIDER, Pratyush, Rohit, bed, chair, stop sign, traffic light, umbrella
+  - Arpita: 24 detections
+  - OUTSIDER: 115 detections
+  - Pratyush: 757 detections
+  - Rohit: 226 detections
+  - bed: 3 detections
+  - chair: 1 detections
+  - stop sign: 3 detections
+  - traffic light: 1 detections
+  - umbrella: 2 detections
+============================================================
