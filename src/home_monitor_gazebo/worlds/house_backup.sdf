@@ -1,0 +1,162 @@
+<?xml version="1.0" ?>
+<sdf version="1.10">
+  <world name="home_monitor_house">
+
+    <!-- Physics -->
+    <physics name="1ms" type="gz">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+
+    <!-- Gazebo systems -->
+    <plugin
+      filename="gz-sim-physics-system"
+      name="gz::sim::systems::Physics"/>
+
+    <plugin
+      filename="gz-sim-sensors-system"
+      name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+
+    <plugin
+      filename="gz-sim-scene-broadcaster-system"
+      name="gz::sim::systems::SceneBroadcaster"/>
+
+    <!-- Sun -->
+    <light name="sun" type="directional">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <direction>-0.5 0.3 -1</direction>
+    </light>
+
+    <!-- Ground -->
+    <model name="ground">
+      <static>true</static>
+
+      <link name="ground_link">
+
+        <collision name="ground_collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>30 30</size>
+            </plane>
+          </geometry>
+        </collision>
+
+        <visual name="ground_visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>30 30</size>
+            </plane>
+          </geometry>
+        </visual>
+
+      </link>
+    </model>
+
+    <!-- HOUSE OUTER WALLS -->
+
+    <!-- Back wall -->
+    <model name="back_wall">
+      <static>true</static>
+      <pose>0 6.86 1.5 0 0 0</pose>
+
+      <link name="wall">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>16.46 0.20 3.0</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>16.46 0.20 3.0</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Front wall -->
+    <model name="front_wall">
+      <static>true</static>
+      <pose>0 -6.86 1.5 0 0 0</pose>
+
+      <link name="wall">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>16.46 0.20 3.0</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>16.46 0.20 3.0</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Left wall -->
+    <model name="left_wall">
+      <static>true</static>
+      <pose>-8.23 0 1.5 0 0 0</pose>
+
+      <link name="wall">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.20 13.72 3.0</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.20 13.72 3.0</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Right wall -->
+    <model name="right_wall">
+      <static>true</static>
+      <pose>8.23 0 1.5 0 0 0</pose>
+
+      <link name="wall">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.20 13.72 3.0</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.20 13.72 3.0</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+
+  </world>
+</sdf>
